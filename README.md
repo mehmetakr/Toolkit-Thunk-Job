@@ -18,3 +18,4 @@ Silme işlemı yapılacak ancak bunun için veriyi önce APİ den silmemız gere
 
 <img src="./job.gif">
 # Toolkit-Thunk-Job
+# Toolkit-Thunk-Job
