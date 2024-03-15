@@ -1,0 +1,85 @@
+{
+  "jobs": [
+    {
+      "id": "6",
+      "position": "Data Analist Mühendis",
+      "date": "04/14/2013",
+      "type": "Yarı Zamanlı",
+      "company": "Arçelik",
+      "status": "Mülakat",
+      "location": "Seattle"
+    },
+    {
+      "id": "8",
+      "position": "İT Mühendis",
+      "date": "04/14/2013",
+      "type": "Tam Zamanlı",
+      "company": "Qatar Energy",
+      "status": "Devam Ediyor",
+      "location": "Paris"
+    },
+    {
+      "id": "3",
+      "position": "Backend developer",
+      "location": "İstanbul",
+      "date": "23/04/2045",
+      "type": "Staj",
+      "company": "Risehorizon",
+      "status": "Mülakat"
+    },
+    {
+      "id": "4",
+      "position": "Frontend developer",
+      "type": "Yarı Zamanlı",
+      "status": "Reddedildi",
+      "date": "12/05/2035",
+      "company": "Solidmentality",
+      "location": "Ankara"
+    },
+    {
+      "id": "7",
+      "position": "Test Mühendis",
+      "date": "04/14/2013",
+      "type": "Staj",
+      "company": "Aselsan",
+      "status": " Mülakat",
+      "location": "Ottowa"
+    },
+    {
+      "id": "7fa3d30c-d1e7-4dc5-9a19-2d079cc40b62",
+      "position": "handikap",
+      "company": "kruvazyer",
+      "location": "dublin",
+      "status": "Devam Ediyor",
+      "type": "Yarı Zamanlı",
+      "date": "13.03.2024"
+    },
+    {
+      "id": "3c3a36cb-58f0-47ed-8f35-2509624ba50e",
+      "position": "Mühendis",
+      "company": "Amazon",
+      "location": "İstanbul",
+      "status": "Devam Ediyor",
+      "type": "Tam Zamanlı",
+      "date": "15.03.2024"
+    },
+    {
+      "id": "8994931a-dd84-4926-8205-996350aa0079",
+      "position": "Tekniker",
+      "company": "Yahoo",
+      "location": "Diyarbakır",
+      "status": "Mülakat",
+      "type": "Uzaktan",
+      "date": "15.03.2024"
+    },
+    {
+      "id": "c734e65a-ac45-4dd1-8b0f-92d0a3755593",
+      "position": "muhendıs",
+      "company": "kolaydegıl",
+      "location": "adana",
+      "status": "Devam Ediyor",
+      "type": "Yarı Zamanlı",
+      "date": "15.03.2024"
+    }
+  ]
+}

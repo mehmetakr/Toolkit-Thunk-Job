@@ -1,0 +1,620 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "poppins";
+  background-color: rgba($color: #149dd3, $alpha: 1.0);
+  color: white;
+}
+
+header {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+
+
+  nav {
+
+    gap: 20px;
+    display: flex;
+
+    a {
+
+
+      text-decoration: none;
+      color: rgb(139, 7, 247);
+    }
+
+    .active {
+      text-shadow: 0 0 20px white;
+    }
+  }
+}
+
+
+// loader css
+
+.loader {
+  position: relative;
+  width: 120px;
+  height: 90px;
+  margin: 0 auto;
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #2a9d8f;
+  animation: loading-bounce 0.5s ease-in-out infinite alternate;
+}
+
+.loader:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 7px;
+  width: 45px;
+  border-radius: 4px;
+  box-shadow: 0 5px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 95px 0 #f2f2f2;
+  animation: loading-step 1s ease-in-out infinite;
+}
+
+@keyframes loading-bounce {
+  0% {
+    transform: scale(1, 0.7);
+  }
+
+  40% {
+    transform: scale(0.8, 1.2);
+  }
+
+  60% {
+    transform: scale(1, 1);
+  }
+
+  100% {
+    bottom: 140px;
+  }
+}
+
+@keyframes loading-step {
+  0% {
+    box-shadow: 0 10px 0 rgba(0, 0, 0, 0),
+      0 10px 0 #f2f2f2,
+      -35px 50px 0 #f2f2f2,
+      -70px 90px 0 #f2f2f2;
+  }
+
+  100% {
+    box-shadow: 0 10px 0 #f2f2f2,
+      -35px 50px 0 #f2f2f2,
+      -70px 90px 0 #f2f2f2,
+      -70px 90px 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.error {
+
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+
+  p {
+
+    display: flex;
+    gap: 10px;
+  }
+
+  span {
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    color: rgb(141, 25, 25);
+
+  }
+
+
+  // Button css i 
+
+  button {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff80;
+    text-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: transparent;
+    border: 1px solid #ffffff80;
+    transition: 0.5s ease;
+    user-select: none;
+    display: flex;
+
+  }
+
+  #btn:hover,
+  :focus {
+    color: #ffffff;
+    font-size: 20px;
+    background: #f51414e8;
+    border: 2px solid #008cff;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+      0 0 100px #008cff;
+  }
+
+  .btn {
+
+
+    display: flex;
+    margin: 60px;
+
+  }
+
+}
+
+.üst {
+
+  display: flex;
+  gap: 20px;
+}
+
+
+.list-page {
+
+  padding: 20px;
+
+}
+
+
+.job-list {
+
+  display: grid;
+  // grid template-columns yapısı columnlara ayırdı ve otomatik ayarlama yaptı boyutları. mınmax ile de mınımumda 400px olarak ekrana sığdırdı ve maximumda ise  1fr yaptık
+  // (Responsive bir yapı saglıyor)
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 50px;
+}
+
+.card {
+
+  background-color: gray;
+  border-radius: 20px;
+  padding: 20px;
+
+  .head {
+
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+
+    .left {
+
+      display: flex;
+      gap: 40px;
+      margin: 20px;
+      align-items: center;
+    }
+
+    .letter {
+
+      background-color: #008cff;
+      width: 60px;
+      text-transform: uppercase;
+      place-items: center;
+      height: 60px;
+      display: grid;
+      border-radius: 8px;
+      font-size: 30px;
+    }
+  }
+}
+
+.body {
+  margin: 15px;
+
+}
+
+
+.bodyalt {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  span {
+
+    background-color: yellow;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  span:hover {
+
+    font-size: 20px;
+    transition: .2s;
+    transition: font-size 0.5s ease;
+    /* Font boyutu değişimini 0.5 saniyede yap, geçiş kolaylığı (ease) kullanarak yavaş bir geçiş yap */
+
+    box-shadow: 5px 5px 5px 5px lightblue;
+  }
+}
+
+.bodyüst {
+  padding-bottom: 20px;
+
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+
+
+//SİLME BUTONU 
+
+
+button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #000000;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+
+  font-size: 18px;
+}
+
+button:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #ff0303;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+button:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+button span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover span {
+  color: #183153;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+//LOKASYON
+
+.lokasyon {
+
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.type {
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.date {
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+//Ekleme sayfası 
+
+.add-page {
+
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  min-height: 90vh;
+
+}
+
+.add-sec {
+  width: 70vw;
+  max-width: 700px;
+  border: 2px solid black;
+  box-shadow: 0 0 55px 0 rgb(226, 68, 160);
+  padding: 25px;
+
+
+  form {
+
+    margin-top: 60px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)), ;
+    gap: 20px;
+
+    div {
+
+
+      display: flex;
+      flex-direction: column;
+      border: none;
+
+      input,
+      select {
+
+
+        padding: 10px 15px;
+        margin-top: 5px;
+        border-radius: 5px;
+        font-family: "poppins";
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+.filter-sec {
+
+
+  @extend .add-sec;
+  margin: 20px auto 80px;
+
+}
+
+// ADDJOB BUTONU
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  overflow: hidden;
+  height: 3rem;
+  background-size: 300% 300%;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+  transition: 0.5s;
+  animation: gradient_301 5s ease infinite;
+  border: double 4px transparent;
+  background-image: linear-gradient(#212121, #212121), linear-gradient(137.48deg, #ffdb3b 10%, #FE53BB 45%, #8F51EA 67%, #0044ff 87%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.basma {
+
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  place-items: center;
+  margin-top: 25px;
+}
+
+#container-stars {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+}
+
+strong {
+  z-index: 2;
+  font-family: 'Avalors Personal Use';
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: #FFFFFF;
+  text-shadow: 0 0 4px white;
+}
+
+#glow {
+  position: absolute;
+  display: flex;
+  width: 12rem;
+}
+
+.circle {
+  width: 100%;
+  height: 30px;
+  filter: blur(2rem);
+  animation: pulse_3011 4s infinite;
+  z-index: -1;
+}
+
+.circle:nth-of-type(1) {
+  background: rgba(254, 83, 186, 0.636);
+}
+
+.circle:nth-of-type(2) {
+  background: rgba(142, 81, 234, 0.704);
+}
+
+.btn:hover #container-stars {
+  z-index: 1;
+  background-color: #212121;
+}
+
+.btn:hover {
+  transform: scale(1.1)
+}
+
+.btn:active {
+  border: double 4px #FE53BB;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  animation: none;
+}
+
+.btn:active .circle {
+  background: #FE53BB;
+}
+
+#stars {
+  position: relative;
+  background: transparent;
+  width: 200rem;
+  height: 200rem;
+}
+
+#stars::after {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  left: -100rem;
+  width: 100%;
+  height: 100%;
+  animation: animStarRotate 90s linear infinite;
+}
+
+#stars::after {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+}
+
+#stars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 170%;
+  height: 500%;
+  animation: animStar 60s linear infinite;
+}
+
+#stars::before {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+  opacity: 0.5;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-135rem);
+  }
+}
+
+@keyframes animStarRotate {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}
+
+@keyframes gradient_301 {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse_3011 {
+  0% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.navbar{
+
+
+background-color: #0e050d;
+border-radius: 20px;
+padding: 10px;
+margin: 20px;
+}
